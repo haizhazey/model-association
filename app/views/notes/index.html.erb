@@ -1,0 +1,10 @@
+<h1>나만의 노트</h1>
+
+<form action="/notes/create" method="POST">
+    <input name="authenticity_token" type="hidden" value="<%= @token >"></input>
+    <input type="text" name="title"><br>
+    <textarea name="content"></textarea>
+    <input type="submit" value="기록">
+</form>
+<br>
+<a href="/notes/all"> 전체 글 확인 </a>

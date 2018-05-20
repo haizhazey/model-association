@@ -1,0 +1,8 @@
+<h1>전체 글 목록</h1>
+<h2><a href='/'>New Note</a></h2>
+<hr>
+<% @notes.each do |note| %>
+  <li>
+    <%= note.id %> 번 게시물 - 제목 : <a href="/notes/one/<%= note.id %>"><%= note.title %></a>
+  </li>
+  <% end %>

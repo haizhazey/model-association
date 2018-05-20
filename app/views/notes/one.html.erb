@@ -1,0 +1,8 @@
+<h1>제목 : <%= @note.title %></h1>
+<p>내용 : <%= @note.content %></p>
+<a href='/notes/all'>목록</a>
+<!--TODO: confirm message-->
+<a href='/notes/<%= @note.id %>/destroy' data-confirm="삭제하시겠습니까?" data-method="delete">삭제</a>
+<a href='/notes/edit/<%= @note.id %>'>수정</a>
+<br><br>
+

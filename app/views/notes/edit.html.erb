@@ -1,0 +1,11 @@
+<h1>기존 글 수정</h1>
+
+<form action="/notes/<%= @note.id %>" method="POST">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="authenticity_token" value=<%= @token %>
+    <input type="text" name="edit_title" value="<%= @note.title %>"><br>
+    <textarea name="edit_content"><%= @note.content %></textarea>
+    <input type="submit" value="기록">
+</form>
+<br>
+<a href="/notes/all"> 전체 글 확인 </a>
